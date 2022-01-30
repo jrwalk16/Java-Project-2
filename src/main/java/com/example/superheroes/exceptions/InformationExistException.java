@@ -5,9 +5,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 
 @ResponseStatus(HttpStatus.CONFLICT)
-public class InformationExistsException extends RuntimeException {
+public class InformationExistException extends RuntimeException {
 
-    public InformationExistsException(String message){
+    public InformationExistException(String message){
         super(message);
     }
 }
