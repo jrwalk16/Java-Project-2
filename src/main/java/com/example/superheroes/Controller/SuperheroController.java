@@ -21,10 +21,10 @@ public class SuperheroController {
         this.superheroService = superheroService;
     }
 
-    @GetMapping("/superheroes/")
-    public List<Superhero> getAllSuperheroes(){
-        return superheroService.getAllSuperheroes();
-    }
+//    @GetMapping("/superheroes/")
+//    public List<Superhero> getAllSuperheroes(){
+//        return superheroService.getAllSuperheroes();
+//    }
 
     @PostMapping("/superheroes/")
     public Superhero createSuperhero(@RequestBody Superhero superheroObject){

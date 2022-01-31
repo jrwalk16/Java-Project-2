@@ -1,6 +1,7 @@
 package com.example.superheroes.model;
 
 import javax.persistence.*;
+import com.example.superheroes.service.SuperheroService;
 
 @Entity
 @Table(name = "superheroes")

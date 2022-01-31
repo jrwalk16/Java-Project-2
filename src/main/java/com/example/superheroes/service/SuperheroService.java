@@ -1,5 +1,5 @@
 package com.example.superheroes.service;
-
+import com.example.superheroes.service.SuperheroService;
 import com.example.superheroes.exceptions.InformationExistException;
 import com.example.superheroes.model.Superhero;
 import com.example.superheroes.repository.SuperheroRepository;
@@ -24,7 +24,7 @@ public class SuperheroService {
     }
 
     public Superhero createSuperhero(Superhero superheroObject){
-        Superhero superhero = superheroRepository.findByName(superheroObject.getHeroName());
+        Superhero superhero = superheroRepository.findByHeroName(superheroObject.getHeroName());
         if(superhero != null){
             throw new InformationExistException("superhero with name " + superhero.getHeroName() + "already exists");
         } else {
