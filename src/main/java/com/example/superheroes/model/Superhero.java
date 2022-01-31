@@ -13,50 +13,50 @@ public class Superhero {
     private Long id;
 
     @Column
-    private String hero_name;
+    private String heroName;
 
     @Column
-    private String supporting_character;
-
-    public Superhero(Long id, String hero_name, String supporting_character) {
-        this.id = id;
-        this.hero_name = hero_name;
-        this.supporting_character = supporting_character;
-    }
+    private String hometown;
 
     public Superhero() {
     }
 
-    @Override
-    public String toString() {
-        return "Superhero{" +
-                "id=" + id +
-                ", hero_name='" + hero_name + '\'' +
-                ", supporting_character='" + supporting_character + '\'' +
-                '}';
+    public Superhero(Long id, String heroName, String hometown) {
+        this.id = id;
+        this.heroName = heroName;
+        this.hometown = hometown;
     }
 
     public Long getId() {
         return id;
     }
 
+    @Override
+    public String toString() {
+        return "Superhero{" +
+                "id=" + id +
+                ", heroName='" + heroName + '\'' +
+                ", hometown='" + hometown + '\'' +
+                '}';
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
 
-    public String getHero_name() {
-        return hero_name;
+    public String getHeroName() {
+        return heroName;
     }
 
-    public void setHero_name(String hero_name) {
-        this.hero_name = hero_name;
+    public void setHeroName(String heroName) {
+        this.heroName = heroName;
     }
 
-    public String getSupporting_character() {
-        return supporting_character;
+    public String getHometown() {
+        return hometown;
     }
 
-    public void setSupporting_character(String supporting_character) {
-        this.supporting_character = supporting_character;
+    public void setHometown(String hometown) {
+        this.hometown = hometown;
     }
 }
