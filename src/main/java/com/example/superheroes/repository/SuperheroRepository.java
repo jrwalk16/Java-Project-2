@@ -15,7 +15,7 @@ public interface SuperheroRepository extends JpaRepository<Superhero, Long> {
 
 
 
-    Superhero findByHeroName(String superheroName);
+    Superhero findByHeroName(String heroName);
 
 
 }
