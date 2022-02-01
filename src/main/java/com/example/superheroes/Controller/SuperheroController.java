@@ -38,4 +38,10 @@ public class SuperheroController {
         return superheroService.getSuperhero(heroId);
     }
 
+    @PutMapping("/superheroes/{heroId}/")
+    public Superhero updateSuperhero(@PathVariable(value = "heroId") Long heroId, @RequestBody Superhero superheroObject){
+        return superheroService.updateSuperhero(heroId, superheroObject);
+    }
+
+
 }
