@@ -1,4 +1,5 @@
 package com.example.superheroes.service;
+import com.example.superheroes.exceptions.InformationNotFoundException;
 import com.example.superheroes.service.SuperheroService;
 import com.example.superheroes.exceptions.InformationExistException;
 import com.example.superheroes.model.Superhero;
@@ -6,7 +7,9 @@ import com.example.superheroes.repository.SuperheroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.swing.text.html.Option;
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -29,6 +32,15 @@ public class SuperheroService {
             throw new InformationExistException("superhero with name " + superhero.getHeroName() + "already exists");
         } else {
             return superheroRepository.save(superheroObject);
+        }
+    }
+
+    public Optional<Superhero> getSuperhero(Long heroId){
+        Optional<Superhero> superhero = superheroRepository.findById(heroId);
+        if(superhero.isPresent()){
+            return superhero;
+        } else {
+            throw new InformationNotFoundException("category with id " + heroId + " not found");
         }
     }
 }
