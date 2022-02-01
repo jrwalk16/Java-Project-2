@@ -43,5 +43,9 @@ public class SuperheroController {
         return superheroService.updateSuperhero(heroId, superheroObject);
     }
 
+    @DeleteMapping("/superheroes/{heroId}/")
+    public Optional<Superhero> deleteSuperhero(@PathVariable(value = "heroId") Long heroId){
+        return superheroService.deleteSuperhero(heroId);
+    }
 
 }

@@ -56,4 +56,14 @@ public class SuperheroService {
             throw new InformationNotFoundException("superhero with id " + heroId + " not found");
         }
     }
+
+    public Optional<Superhero> deleteSuperhero(Long heroId){
+        Optional<Superhero> superhero = superheroRepository.findById(heroId);
+        if(superhero.isPresent()){
+            superheroRepository.deleteById(heroId);
+            return superhero;
+        } else {
+            throw new InformationNotFoundException("superhero with id " + heroId + " not found");
+        }
+    }
 }
