@@ -15,5 +15,5 @@ public interface SecretIdentityRepository extends JpaRepository<SecretIdentity, 
     SecretIdentity findBySecretName(String secretName);
 
 
-    List<SecretIdentity> findByCategoryId(Long nameId);
+//    List<SecretIdentity> findByCategoryId(Long nameId);
 }

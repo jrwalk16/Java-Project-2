@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface SeriesRepository extends JpaRepository<Series, Long> {
 
 
-
+    Series findBySeriesName(String seriesName);
 }

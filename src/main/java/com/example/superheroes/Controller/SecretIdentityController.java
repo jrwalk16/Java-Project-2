@@ -55,8 +55,8 @@ public class SecretIdentityController {
 //    }
 
 
-    @GetMapping("/superheroes/{heroId}/secretidentity/")
-    public List<SecretIdentity> getSecretIdentities(@PathVariable(value = "heroId")Long heroId) {
-        return secretIdentityService.getSecretIdentities(heroId);
-    }
+//    @GetMapping("/superheroes/{heroId}/secretidentity/")
+//    public List<SecretIdentity> getSecretIdentities(@PathVariable(value = "heroId")Long heroId) {
+//        return secretIdentityService.getSecretIdentities(heroId);
+//    }
 }
