@@ -9,6 +9,8 @@ import com.example.superheroes.service.SuperheroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping(path = "/api")
@@ -45,5 +47,10 @@ public class SeriesController {
     @PostMapping("/superheroes/{heroId}/series/")
     public Series createSeries(@PathVariable(value = "heroId") Long heroId, @RequestBody Series seriesObject) {
         return seriesService.createSeries(heroId, seriesObject);
+    }
+
+    @GetMapping("/superheroes/{heroId}/series/")
+    public List<Series> getSeries(@PathVariable(value = "heroId")Long heroId){
+        return seriesService.getSeries(heroId);
     }
 }

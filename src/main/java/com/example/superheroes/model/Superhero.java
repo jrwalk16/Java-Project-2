@@ -3,6 +3,8 @@ package com.example.superheroes.model;
 import javax.persistence.*;
 import com.example.superheroes.service.SuperheroService;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 import java.util.List;
 
@@ -21,6 +23,20 @@ public class Superhero {
 
     @Column
     private String hometown;
+
+
+    @OneToMany(mappedBy = "category", orphanRemoval = true)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List<Series> seriesList;
+
+    public List<Series> getSeriesList(){
+        return seriesList;
+    }
+
+    public void setSeriesList(List<Series> seriesList){
+        this.seriesList = seriesList;
+    }
+
 
 
     @OneToOne(cascade = CascadeType.ALL)

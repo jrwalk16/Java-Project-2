@@ -12,6 +12,7 @@ import com.example.superheroes.repository.SuperheroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -55,5 +56,12 @@ public class SeriesService {
     }
 
 
-
+    public List<Series> getSeries(Long heroId) {
+        Optional<Superhero> superhero = superheroRepository.findById(heroId);
+        if(superhero.isPresent()){
+            return superhero.get().getSeriesList();
+        } else {
+            throw new InformationNotFoundException("hero with id " + heroId + " does not exist");
+        }
+    }
 }

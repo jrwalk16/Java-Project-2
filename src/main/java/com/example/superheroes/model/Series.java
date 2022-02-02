@@ -1,6 +1,8 @@
 package com.example.superheroes.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -19,6 +21,11 @@ public class Series {
     @Column
     private Integer numberOfIssues;
 
+
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "superhero_id")
+    private Superhero superhero;
 
     public Series() {
     }
