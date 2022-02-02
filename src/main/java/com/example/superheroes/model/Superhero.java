@@ -21,9 +21,8 @@ public class Superhero {
     private String hometown;
 
 
-//    @JsonIgnore
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "names_id")
+    @JoinColumn(name = "names_id", referencedColumnName = "id")
     private SecretIdentity secretIdentity;
 
     public Superhero() {

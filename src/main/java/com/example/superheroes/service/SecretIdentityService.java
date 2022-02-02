@@ -32,15 +32,15 @@ public class SecretIdentityService {
     }
 
     public SecretIdentity createSecretIdentity(Long heroId, SecretIdentity secretIdentityObject){
-       Superhero superhero = superheroRepository.findByHeroName(heroId);
-       if (superhero == null){
+       Optional<Superhero> superhero = superheroRepository.findById(heroId);
+       if (superhero.isEmpty()){
            throw new InformationNotFoundException("hero with id " + heroId + " does not exist");
        }
        SecretIdentity secretIdentity = secretIdentityRepository.findBySecretName(secretIdentityObject.getSecretName());
        if(secretIdentity != null) {
            throw new InformationExistException("secret identity with name " +secretIdentity.getSecretName() + " already exists");
        }
-       secretIdentityObject.setSecretName();
-       secretIdentityObject.setSuperhero(superhero);
+       secretIdentityObject.setSuperhero(superhero.get());
+       return secretIdentityRepository.save(secretIdentityObject);
     }
 }

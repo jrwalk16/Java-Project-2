@@ -14,15 +14,14 @@ public class SecretIdentity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
+    @Column
     private String secretName;
 
     @Column
     private String profession;
 
-//    @JsonIgnore
+    @JoinColumn(name = "superheroes_id", referencedColumnName = "id")
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "superheroes_id")
     private Superhero superhero;
 
 
