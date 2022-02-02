@@ -7,6 +7,8 @@ import com.example.superheroes.service.SuperheroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "/api")
 public class SecretIdentityController {
@@ -28,5 +30,16 @@ public class SecretIdentityController {
     @PostMapping("/superheroes/{heroId}/secretidentity/")
     public SecretIdentity createSecretIdentity(@PathVariable(value = "heroId") Long heroId, @RequestBody SecretIdentity secretIdentityObject){
         return secretIdentityService.createSecretIdentity(heroId, secretIdentityObject);
+    }
+
+//    @GetMapping("/superheroes/{heroId}/secretidentity/{nameId}")
+//    public SecretIdentity getSecretIdentity(@PathVariable(value = "heroId") Long heroId, @PathVariable(value = "nameId") Long nameId){
+//        return secretIdentityService.getSecretIdentity(heroId, nameId);
+//    }
+
+
+    @GetMapping("/superheroes/{heroId}/secretidentity/")
+    public List<SecretIdentity> getSecretIdentities(@PathVariable(value = "heroId")Long heroId) {
+        return secretIdentityService.getSecretIdentities(heroId);
     }
 }

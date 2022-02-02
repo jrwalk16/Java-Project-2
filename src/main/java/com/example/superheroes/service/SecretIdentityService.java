@@ -10,7 +10,9 @@ import com.example.superheroes.repository.SuperheroRepository;
 import net.bytebuddy.implementation.bind.annotation.Super;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.PathVariable;
 
+import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 
@@ -32,7 +34,7 @@ public class SecretIdentityService {
     }
 
     public SecretIdentity createSecretIdentity(Long heroId, SecretIdentity secretIdentityObject){
-       Optional<Superhero> superhero = superheroRepository.findById(heroId);
+        Optional<Superhero> superhero = superheroRepository.findById(heroId);
        if (superhero.isEmpty()){
            throw new InformationNotFoundException("hero with id " + heroId + " does not exist");
        }
@@ -43,4 +45,24 @@ public class SecretIdentityService {
        secretIdentityObject.setSuperhero(superhero.get());
        return secretIdentityRepository.save(secretIdentityObject);
     }
+
+
+
+    public List<SecretIdentity> getSecretIdentities(Long heroId) {
+        Optional<Superhero> superhero = superheroRepository.findById(heroId);
+        if(superhero.isPresent()){
+            return superhero.get().getSecretIdentityList();
+        } else {
+            throw new InformationNotFoundException("superhero with id " + heroId + " not found");
+        }
+    }
+
+
+//    public List<SecretIdentity> getSecretIdentities(@PathVariable(value = "heroId") Long heroId{
+//        Superhero superhero = superheroRepository.findByHeroName(heroId);
+//        if(superhero == null) {
+//            throw new InformationNotFoundException("superhero with id " + heroId + " does not exist");
+//        }
+//        return superhero.getSecretIdentityList();
+//    }
 }

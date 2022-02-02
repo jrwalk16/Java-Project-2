@@ -1,5 +1,6 @@
 package com.example.superheroes.service;
 import com.example.superheroes.exceptions.InformationNotFoundException;
+import com.example.superheroes.model.SecretIdentity;
 import com.example.superheroes.service.SuperheroService;
 import com.example.superheroes.exceptions.InformationExistException;
 import com.example.superheroes.model.Superhero;
@@ -66,4 +67,7 @@ public class SuperheroService {
             throw new InformationNotFoundException("superhero with id " + heroId + " not found");
         }
     }
+
+
+
 }

@@ -4,6 +4,8 @@ import javax.persistence.*;
 import com.example.superheroes.service.SuperheroService;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import java.util.List;
+
 @Entity
 @Table(name = "superheroes")
 public class Superhero {
