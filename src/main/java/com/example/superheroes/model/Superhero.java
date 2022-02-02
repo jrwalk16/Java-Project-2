@@ -2,6 +2,7 @@ package com.example.superheroes.model;
 
 import javax.persistence.*;
 import com.example.superheroes.service.SuperheroService;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "superheroes")
@@ -18,6 +19,12 @@ public class Superhero {
 
     @Column
     private String hometown;
+
+
+//    @JsonIgnore
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "names_id")
+    private SecretIdentity secretIdentity;
 
     public Superhero() {
     }
@@ -60,4 +67,6 @@ public class Superhero {
     public void setHometown(String hometown) {
         this.hometown = hometown;
     }
+
+
 }

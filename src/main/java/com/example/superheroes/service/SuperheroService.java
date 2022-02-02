@@ -4,7 +4,7 @@ import com.example.superheroes.service.SuperheroService;
 import com.example.superheroes.exceptions.InformationExistException;
 import com.example.superheroes.model.Superhero;
 import com.example.superheroes.repository.SuperheroRepository;
-import net.bytebuddy.implementation.bind.annotation.Super;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

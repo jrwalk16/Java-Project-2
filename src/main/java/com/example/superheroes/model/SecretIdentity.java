@@ -1,6 +1,8 @@
 package com.example.superheroes.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,11 +14,16 @@ public class SecretIdentity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column
+    @Column(unique = true)
     private String secretName;
 
     @Column
     private String profession;
+
+//    @JsonIgnore
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "superheroes_id")
+    private Superhero superhero;
 
 
     public SecretIdentity() {
@@ -59,5 +66,13 @@ public class SecretIdentity {
 
     public void setProfession(String profession) {
         this.profession = profession;
+    }
+
+    public Superhero getSuperhero() {
+        return superhero;
+    }
+
+    public void setSuperhero(Superhero superhero) {
+        this.superhero = superhero;
     }
 }

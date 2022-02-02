@@ -8,4 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface SecretIdentityRepository extends JpaRepository<SecretIdentity, Long> {
 
 
+    SecretIdentity findBySecretName(String secretName);
 }
