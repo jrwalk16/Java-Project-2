@@ -2,6 +2,7 @@ package com.example.superheroes.Controller;
 
 import com.example.superheroes.model.Superhero;
 import com.example.superheroes.repository.SuperheroRepository;
+import com.example.superheroes.service.PowersService;
 import com.example.superheroes.service.SuperheroService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,14 @@ import java.util.Optional;
 @RestController
 @RequestMapping(path = "/api")
 public class SuperheroController {
+
+    private PowersService powersService;
+
+    @Autowired
+    public void setPowersService(PowersService powersService){
+        this.powersService = powersService;
+    }
+
 
     private SuperheroService superheroService;
 
