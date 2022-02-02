@@ -25,7 +25,7 @@ public class Superhero {
     private String hometown;
 
 
-    @OneToMany(mappedBy = "category", orphanRemoval = true)
+    @OneToMany(mappedBy = "superhero", orphanRemoval = true)
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Series> seriesList;
 

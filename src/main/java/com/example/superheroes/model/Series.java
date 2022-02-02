@@ -69,6 +69,11 @@ public class Series {
         this.numberOfIssues = numberOfIssues;
     }
 
+    public Superhero getSuperhero() {
+        return superhero;
+    }
+
     public void setSuperhero(Superhero superhero) {
+        this.superhero = superhero;
     }
 }
