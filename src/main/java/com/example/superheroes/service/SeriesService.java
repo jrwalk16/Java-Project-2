@@ -1,2 +1,4 @@
-package com.example.superheroes.service;public class SeriesService {
+package com.example.superheroes.service;
+
+public class SeriesService {
 }

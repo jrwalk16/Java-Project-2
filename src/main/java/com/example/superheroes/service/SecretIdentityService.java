@@ -48,14 +48,14 @@ public class SecretIdentityService {
 
 
 
-    public List<SecretIdentity> getSecretIdentities(Long heroId) {
-        Optional<Superhero> superhero = superheroRepository.findById(heroId);
-        if(superhero.isPresent()){
-            return superhero.get().getSecretIdentityList();
-        } else {
-            throw new InformationNotFoundException("superhero with id " + heroId + " not found");
-        }
-    }
+//    public List<SecretIdentity> getSecretIdentities(Long heroId) {
+//        Optional<Superhero> superhero = superheroRepository.findById(heroId);
+//        if(superhero.isPresent()){
+//            return superhero.get().getSecretIdentityList();
+//        } else {
+//            throw new InformationNotFoundException("superhero with id " + heroId + " not found");
+//        }
+//    }
 
 
 //    public List<SecretIdentity> getSecretIdentities(@PathVariable(value = "heroId") Long heroId{
