@@ -25,6 +25,14 @@ public class Superhero {
     private String hometown;
 
 
+    public SecretIdentity getSecretIdentity() {
+        return secretIdentity;
+    }
+
+    public void setSecretIdentity(SecretIdentity secretIdentity) {
+        this.secretIdentity = secretIdentity;
+    }
+
     @OneToMany(mappedBy = "superhero", orphanRemoval = true)
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Series> seriesList;
