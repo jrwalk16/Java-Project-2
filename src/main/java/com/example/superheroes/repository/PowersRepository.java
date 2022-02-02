@@ -5,5 +5,7 @@ import org.springframework.data.jpa.repository.support.JpaRepositoryImplementati
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PowersRepository extends JpaRepository {
+public interface PowersRepository extends JpaRepository<Powers, Long> {
+
+
 }
