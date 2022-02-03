@@ -51,3 +51,6 @@ Create a management system for comic book inventory using Spring Boot REST API. 
 
 ![postman](https://user-images.githubusercontent.com/77462898/152444063-eaca287a-b7af-489a-b3f7-663e8eca2ad3.png)
 
+![postgres logo](https://user-images.githubusercontent.com/77462898/152444380-ffb0ab5c-6a19-4c2a-830c-be25c418d370.png)
+
+![intelliJ logo](https://media.git.generalassemb.ly/user/40878/files/8cd52480-851c-11ec-9421-b7c2fbc16551)
