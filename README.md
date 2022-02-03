@@ -39,4 +39,4 @@
 
 
 ### Entity Relationship Diagram
-![Superhero.png](resources/SuperHero.png)
+![SuperHero](https://user-images.githubusercontent.com/77462898/152441627-b82ff963-dee8-4d26-9d20-5a304c77ac59.png)
