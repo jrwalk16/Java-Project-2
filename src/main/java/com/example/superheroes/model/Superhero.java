@@ -25,13 +25,7 @@ public class Superhero {
     private String hometown;
 
 
-    public SecretIdentity getSecretIdentity() {
-        return secretIdentity;
-    }
 
-    public void setSecretIdentity(SecretIdentity secretIdentity) {
-        this.secretIdentity = secretIdentity;
-    }
 //(mappedBy = "superhero", orphanRemoval = true)
     @OneToMany(mappedBy = "superhero", orphanRemoval = true)
     @LazyCollection(LazyCollectionOption.FALSE)
@@ -57,9 +51,16 @@ public class Superhero {
         this.supportingCharactersList = supportingCharactersList;
     }
 
+//    @LazyCollection(LazyCollectionOption.FALSE)
+//    @LazyCollection(LazyCollectionOption.FALSE)(
+
     @OneToOne(cascade = CascadeType.ALL)
-    @LazyCollection(LazyCollectionOption.FALSE)
+    @JoinColumn(name = "names_id", referencedColumnName = "id")
     private SecretIdentity secretIdentity;
+//    @JoinColumn(name = "names_id", referencedColumnName = "id")
+//    private SecretIdentity secretIdentity;
+
+
 
     public Superhero() {
     }

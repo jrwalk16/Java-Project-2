@@ -6,6 +6,7 @@ import com.example.superheroes.exceptions.InformationNotFoundException;
 import com.example.superheroes.model.SecretIdentity;
 import com.example.superheroes.model.Series;
 import com.example.superheroes.model.Superhero;
+import com.example.superheroes.model.SupportingCharacters;
 import com.example.superheroes.repository.SecretIdentityRepository;
 import com.example.superheroes.repository.SuperheroRepository;
 import net.bytebuddy.implementation.bind.annotation.Super;
@@ -62,11 +63,6 @@ public class SecretIdentityService {
     }
 
 
-//    public List<SecretIdentity> getSecretIdentities(@PathVariable(value = "heroId") Long heroId{
-//        Superhero superhero = superheroRepository.findByHeroName(heroId);
-//        if(superhero == null) {
-//            throw new InformationNotFoundException("superhero with id " + heroId + " does not exist");
-//        }
-//        return superhero.getSecretIdentityList();
-//    }
+
+
 }

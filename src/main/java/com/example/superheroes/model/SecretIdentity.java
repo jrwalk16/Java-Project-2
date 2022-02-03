@@ -20,9 +20,12 @@ public class SecretIdentity {
     @Column
     private String profession;
 
-    @JoinColumn(name = "superheroes_id", referencedColumnName = "id")
-    @OneToOne(cascade = CascadeType.ALL)
+    @JsonIgnore
+    @OneToOne
+    @JoinColumn(name = "superhero_id")
     private Superhero superhero;
+//    @JoinColumn(name = "superhero_id")
+
 
 
     public SecretIdentity() {

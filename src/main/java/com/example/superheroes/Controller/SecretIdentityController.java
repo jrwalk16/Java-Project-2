@@ -9,6 +9,8 @@ import com.example.superheroes.service.SuperheroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "/api")
 public class SecretIdentityController {
@@ -53,8 +55,5 @@ public class SecretIdentityController {
     }
 
 
-//    @GetMapping("/superheroes/{heroId}/secretidentity/")
-//    public List<SecretIdentity> getSecretIdentities(@PathVariable(value = "heroId")Long heroId) {
-//        return secretIdentityService.getSecretIdentities(heroId);
-//    }
+
 }
