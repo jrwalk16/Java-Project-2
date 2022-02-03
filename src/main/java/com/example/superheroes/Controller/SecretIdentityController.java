@@ -47,10 +47,10 @@ public class SecretIdentityController {
         return secretIdentityService.createSecretIdentity(heroId, secretIdentityObject);
     }
 
-//    @GetMapping("/superheroes/{heroId}/secretidentity/{nameId}")
-//    public SecretIdentity getSecretIdentity(@PathVariable(value = "heroId") Long heroId, @PathVariable(value = "nameId") Long nameId){
-//        return secretIdentityService.getSecretIdentity(heroId, nameId);
-//    }
+    @GetMapping("/superheroes/{heroId}/secretidentity/{nameId}")
+    public SecretIdentity getSecretIdentity(@PathVariable(value = "heroId") Long heroId, @PathVariable(value = "nameId") Long nameId){
+        return secretIdentityService.getSecretIdentity(heroId, nameId);
+    }
 
 
 //    @GetMapping("/superheroes/{heroId}/secretidentity/")

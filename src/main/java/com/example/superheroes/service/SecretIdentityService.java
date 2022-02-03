@@ -4,6 +4,7 @@ package com.example.superheroes.service;
 import com.example.superheroes.exceptions.InformationExistException;
 import com.example.superheroes.exceptions.InformationNotFoundException;
 import com.example.superheroes.model.SecretIdentity;
+import com.example.superheroes.model.Series;
 import com.example.superheroes.model.Superhero;
 import com.example.superheroes.repository.SecretIdentityRepository;
 import com.example.superheroes.repository.SuperheroRepository;
@@ -48,14 +49,17 @@ public class SecretIdentityService {
 
 
 
-//    public List<SecretIdentity> getSecretIdentities(Long heroId) {
-//        Optional<Superhero> superhero = superheroRepository.findById(heroId);
-//        if(superhero.isPresent()){
-//            return superhero.get().getSecretIdentityList();
-//        } else {
-//            throw new InformationNotFoundException("superhero with id " + heroId + " not found");
-//        }
-//    }
+    public SecretIdentity getSecretIdentity(Long heroId, Long seriesId){
+        Optional<Superhero> superhero = superheroRepository.findById(heroId);
+        if(superhero == null) {
+            throw new InformationNotFoundException("superhero with id " + heroId + " does not exist");
+        }
+        Optional<SecretIdentity> secretIdentity = secretIdentityRepository.findById(seriesId);
+        if(!secretIdentity.isPresent()){
+            throw new InformationNotFoundException("series with id " + seriesId + " does not exist");
+        }
+        return secretIdentity.get();
+    }
 
 
 //    public List<SecretIdentity> getSecretIdentities(@PathVariable(value = "heroId") Long heroId{
