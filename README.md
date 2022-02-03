@@ -1,6 +1,7 @@
 # Java-Project-2
 
-
+### Project Description
+Create a management system for comic book inventory using Spring Boot REST API. 
 
 ### Endpoints
 
@@ -39,4 +40,3 @@
 
 
 ### Entity Relationship Diagram
-![Superhero.png](resources/SuperHero.png)
