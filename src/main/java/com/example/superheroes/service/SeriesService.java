@@ -56,12 +56,24 @@ public class SeriesService {
     }
 
 
-    public List<Series> getSeries(Long heroId) {
+    public List<Series> getAllSeries(Long heroId) {
         Optional<Superhero> superhero = superheroRepository.findById(heroId);
         if(superhero.isPresent()){
             return superhero.get().getSeriesList();
         } else {
             throw new InformationNotFoundException("hero with id " + heroId + " does not exist");
         }
+    }
+
+    public Series getSeries(Long heroId, Long seriesId){
+        Optional<Superhero> superhero = superheroRepository.findById(heroId);
+        if(superhero == null) {
+            throw new InformationNotFoundException("superhero with id " + heroId + " does not exist");
+        }
+        Optional<Series> series = seriesRepository.findById(seriesId);
+        if(!series.isPresent()){
+            throw new InformationNotFoundException("series with id " + seriesId + " does not exist");
+        }
+        return series.get();
     }
 }

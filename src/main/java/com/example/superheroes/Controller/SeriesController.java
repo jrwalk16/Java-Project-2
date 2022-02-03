@@ -49,7 +49,12 @@ public class SeriesController {
     }
 
     @GetMapping("/superheroes/{heroId}/series/")
-    public List<Series> getSeries(@PathVariable(value = "heroId")Long heroId){
-        return seriesService.getSeries(heroId);
+    public List<Series> getAllSeries(@PathVariable(value = "heroId")Long heroId){
+        return seriesService.getAllSeries(heroId);
+    }
+
+    @GetMapping("/superheroes/{heroId}/series/{seriesId}")
+    public Series getSeries(@PathVariable(value = "heroId") Long heroId, @PathVariable(value = "seriesId") Long seriesId){
+        return seriesService.getSeries(heroId, seriesId);
     }
 }
