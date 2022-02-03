@@ -4,6 +4,6 @@
 
 ### Endpoints
 
-| Request Type | URL| Reqtest Body | Request Header |
+| Request Type | URL| Reqtest Body | 
 |--|--|--|--|
-| GET | /api/categories/ | None | Authorization Bearer TOKEN
+| GET | /api/categories/ | None | 
