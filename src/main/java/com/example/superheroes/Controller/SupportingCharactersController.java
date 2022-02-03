@@ -55,4 +55,9 @@ public class SupportingCharactersController {
         return supportingCharactersService.getSupportingCharacters(heroId);
     }
 
+
+    @GetMapping("/superheroes/{heroId}/characters/{characterId}")
+    public SupportingCharacters getSupportingCharacter(@PathVariable(value = "heroId") Long heroId, @PathVariable(value = "characterId") Long characterId){
+        return supportingCharactersService.getSupportingCharacter(heroId, characterId);
+    }
 }

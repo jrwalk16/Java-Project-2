@@ -68,4 +68,16 @@ public class SupportingCharactersService {
             throw new InformationNotFoundException("hero with id " + heroId + " does not exist");
         }
     }
+
+    public SupportingCharacters getSupportingCharacter(Long heroId, Long characterId){
+        Optional<Superhero> superhero = superheroRepository.findById(heroId);
+        if(superhero == null) {
+            throw new InformationNotFoundException("superhero with id " + heroId + " does not exist");
+        }
+        Optional<SupportingCharacters> supportingCharacters = supportingCharactersRepository.findById(characterId);
+        if(!supportingCharacters.isPresent()){
+            throw new InformationNotFoundException("character with id " + characterId + " does not exist");
+        }
+        return supportingCharacters.get();
+    }
 }
