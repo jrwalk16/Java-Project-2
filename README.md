@@ -38,3 +38,5 @@
 * As a user, I want to be able to view all supporting characters of a superhero.
 
 
+### Entity Relationship Diagram
+![](/Users/jeremywalker/Downloads/SuperHero.png)
