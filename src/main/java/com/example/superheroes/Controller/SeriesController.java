@@ -1,8 +1,7 @@
 package com.example.superheroes.Controller;
 
-import com.example.superheroes.model.SecretIdentity;
 import com.example.superheroes.model.Series;
-import com.example.superheroes.service.PowersService;
+import com.example.superheroes.service.SupportingCharactersService;
 import com.example.superheroes.service.SecretIdentityService;
 import com.example.superheroes.service.SeriesService;
 import com.example.superheroes.service.SuperheroService;
@@ -23,10 +22,10 @@ public class SeriesController {
         this.seriesService = seriesService;
     }
 
-    private PowersService powersService;
+    private SupportingCharactersService powersService;
 
     @Autowired
-    public void setPowersService(PowersService powersService) {
+    public void setPowersService(SupportingCharactersService powersService) {
         this.powersService = powersService;
     }
 

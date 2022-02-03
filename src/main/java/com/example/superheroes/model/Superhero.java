@@ -32,7 +32,7 @@ public class Superhero {
     public void setSecretIdentity(SecretIdentity secretIdentity) {
         this.secretIdentity = secretIdentity;
     }
-
+//(mappedBy = "superhero", orphanRemoval = true)
     @OneToMany(mappedBy = "superhero", orphanRemoval = true)
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<Series> seriesList;
@@ -45,10 +45,20 @@ public class Superhero {
         this.seriesList = seriesList;
     }
 
+    @OneToMany(mappedBy = "superhero", orphanRemoval = true)
+    @LazyCollection(LazyCollectionOption.FALSE)
+    private List<SupportingCharacters> supportingCharactersList;
 
+    public List<SupportingCharacters> getSupportingCharactersList() {
+        return supportingCharactersList;
+    }
+
+    public void setSupportingCharactersList(List<SupportingCharacters> supportingCharactersList){
+        this.supportingCharactersList = supportingCharactersList;
+    }
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "names_id", referencedColumnName = "id")
+    @LazyCollection(LazyCollectionOption.FALSE)
     private SecretIdentity secretIdentity;
 
     public Superhero() {
