@@ -4,6 +4,6 @@
 
 ### Endpoints
 
-| Request Type | URL| Reqtest Body | 
-|--|--|--|--|
+| Request Type | URL| Request Body | 
+|--|--|--|
 | GET | /api/categories/ | None | 
