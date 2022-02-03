@@ -20,9 +20,9 @@ public class SecretIdentity {
     @Column
     private String profession;
 
-    @JsonIgnore
+
     @OneToOne
-    @JoinColumn(name = "superhero_id")
+    @JoinColumn(name = "hero_id", referencedColumnName = "id")
     private Superhero superhero;
 //    @JoinColumn(name = "superhero_id")
 
