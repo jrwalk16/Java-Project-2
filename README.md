@@ -39,4 +39,4 @@
 
 
 ### Entity Relationship Diagram
-![img.png](images/Superhero.png)
+SuperHero.png
