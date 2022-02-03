@@ -1,7 +1,7 @@
 # Java-Project-2
 
 ### Project Description
-Create a management system for comic book inventory using Spring Boot REST API. 
+Create a management system for comic book inventory using Spring Boot REST API. The system provides functionality to create superhero entries as well and link them to series they appeared in as well as supporting characters.
 
 ### Endpoints
 
