@@ -40,3 +40,7 @@ Create a management system for comic book inventory using Spring Boot REST API.
 
 
 ### Entity Relationship Diagram
+<<<<<<< HEAD
+=======
+![SuperHero](https://user-images.githubusercontent.com/77462898/152441627-b82ff963-dee8-4d26-9d20-5a304c77ac59.png)
+>>>>>>> c1887c5576759d577ccdc4605904ca900c3d5d26
