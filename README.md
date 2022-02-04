@@ -9,7 +9,7 @@ I wanted to create an application that allowed me to keep track of comic books i
 
 #### Things to add in future
 1. Functionality to match supporting characters to the series they appear.
-2. 
+2. Once we can match characters/series be able to look up all series a supporting character appears.
 
 ### Endpoints
 
