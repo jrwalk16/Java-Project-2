@@ -7,6 +7,10 @@ Create a management system for comic book inventory using Spring Boot REST API. 
 ### Process
 I wanted to create an application that allowed me to keep track of comic books in inventory. I thought about what kinds of information I wanted to be able to find based on the superhero. I decided to add tables for series the character appeared in as well as the supporting characters who appeared alongside them. I aslo included a table listing the secret identity of the superhero. This would be a one-to-one relationship while the others would be one-to-many.
 
+#### Things to add in future
+1. Functionality to match supporting characters to the series they appear.
+2. 
+
 ### Endpoints
 
 | ENDPOINT                                                | FUNCTIONALITY |
@@ -105,7 +109,7 @@ I wanted to create an application that allowed me to keep track of comic books i
 ### Entity Relationship Diagram
 
 
-![SuperHero](https://user-images.githubusercontent.com/77462898/152441627-b82ff963-dee8-4d26-9d20-5a304c77ac59.png)
+![SuperHero](https://media.git.generalassemb.ly/user/40878/files/277d4400-85ad-11ec-8875-6f85f87f6155)
 
 
 ### Programs Used
