@@ -11,6 +11,10 @@ I wanted to create an application that allowed me to keep track of comic books i
 1. Functionality to match supporting characters to the series they appear.
 2. Once we can match characters/series be able to look up all series a supporting character appears.
 
+#### Issues encountered
+1. Came across a few issues that were related to not having correct dependencies in pom.xml file. I spent too much time changes lines of code when my original code was fine I just needed to think more about what function/action I was trying to implement. 
+2. A few times I didn't read through the error description well enough to figure out exactly what was wrong with my application. I need to spend more time reading up on common error codes/messages for Intellij and Spring Boot.
+
 ### Endpoints
 
 | ENDPOINT                                                | FUNCTIONALITY |
